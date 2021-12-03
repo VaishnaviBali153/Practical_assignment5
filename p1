@@ -1,0 +1,20 @@
+enum DivisionError:Error 
+{
+    case dividedByZero
+}
+func division(numerator: Int, denominator: Int) throws {
+  if denominator == 0 {
+    throw DivisionError.dividedByZero
+  }   
+  else {
+    let res = numerator/denominator
+    print(res)
+  }
+}
+do {
+  try division(numerator: 10, denominator: 0)
+  print("Valid Division")
+}
+catch DivisionError.dividedByZero {
+  print("Error: Denominator cannot be 0")
+}
