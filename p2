@@ -1,0 +1,11 @@
+func checkOddEven()
+{
+  var no = 30
+  guard no % 2 == 0 else
+  {    
+    print("Odd Number")
+    return
+  }
+  print("Even Number")
+}
+checkOddEven()
